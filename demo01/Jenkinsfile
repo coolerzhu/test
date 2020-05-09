@@ -4,10 +4,16 @@ pipeline {
 
    stages {
       stage('pull') {
-         steps {
-            echo 'Hello World 1'
-            git credentialsId: 'githob02', url: 'https://github.com/coolerzhu/test.git'
+
+         steps{
+            script {
+                timeout(60) {
+                   echo 'Hello World 1'
+                   git credentialsId: 'githob02', url: 'https://github.com/coolerzhu/test.git'
+                }
+            }
          }
+
       }
       stage('Build') {
           steps {
