@@ -9,7 +9,7 @@ pipeline {
             script {
                 timeout(60) {
                    echo 'Hello World 1'
-                   git credentialsId: 'githob02', url: 'https://github.com/coolerzhu/test.git'
+                   git credentialsId: 'b32ea6f5-379c-43ed-ad25-7cc34d95a52f', url: 'https://github.com/coolerzhu/test.git'
                 }
             }
          }
