@@ -18,6 +18,7 @@ pipeline {
       stage('Build') {
           steps {
              echo 'Hello World 2'
+             sh label: '', script: 'mvn clean package'
           }
       }
 
